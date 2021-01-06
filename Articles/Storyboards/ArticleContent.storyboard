@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pfK-f5-OQD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Article Context View-->
+        <scene sceneID="TN6-b0-Qa3">
+            <objects>
+                <viewController storyboardIdentifier="ArticleContextView" id="pfK-f5-OQD" customClass="ArticleContextView" customModule="Articles" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aTp-63-hbF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UN7-Az-2OM" customClass="RoundedCornersView" customModule="Articles" customModuleProvider="target">
+                                <rect key="frame" x="15" y="74" width="384" height="773"/>
+                                <subviews>
+                                    <wkWebView clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BJP-6a-wkX">
+                                        <rect key="frame" x="0.0" y="0.0" width="384" height="773"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <wkWebViewConfiguration key="configuration">
+                                            <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                            <wkPreferences key="preferences"/>
+                                        </wkWebViewConfiguration>
+                                    </wkWebView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="BJP-6a-wkX" secondAttribute="bottom" id="Act-Yl-MxV"/>
+                                    <constraint firstItem="BJP-6a-wkX" firstAttribute="top" secondItem="UN7-Az-2OM" secondAttribute="top" id="dKn-40-sBQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="BJP-6a-wkX" secondAttribute="trailing" id="fIe-4S-iuu"/>
+                                    <constraint firstItem="BJP-6a-wkX" firstAttribute="leading" secondItem="UN7-Az-2OM" secondAttribute="leading" id="znX-4x-NKf"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ZDx-cE-hFv"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <constraints>
+                            <constraint firstItem="ZDx-cE-hFv" firstAttribute="trailing" secondItem="UN7-Az-2OM" secondAttribute="trailing" constant="15" id="3pz-3V-koe"/>
+                            <constraint firstItem="UN7-Az-2OM" firstAttribute="leading" secondItem="ZDx-cE-hFv" secondAttribute="leading" constant="15" id="bNh-NB-P4p"/>
+                            <constraint firstItem="UN7-Az-2OM" firstAttribute="top" secondItem="ZDx-cE-hFv" secondAttribute="top" constant="30" id="ksa-4e-tvK"/>
+                            <constraint firstItem="ZDx-cE-hFv" firstAttribute="bottom" secondItem="UN7-Az-2OM" secondAttribute="bottom" constant="15" id="vyi-sC-z4x"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="BJP-6a-wkX" id="mgE-aa-8zW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ObN-FR-ZVn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-128" y="130"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
